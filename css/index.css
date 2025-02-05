@@ -13,7 +13,7 @@ body{
     scroll-behavior: smooth;
 }
 
-.container{
+#container{
     height: 100vh;
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
@@ -54,6 +54,7 @@ body{
 
 .boton:hover{
     opacity: 80%;
+    cursor: pointer;
 }
 
 .boton:active{
@@ -135,6 +136,17 @@ body{
     text-align: left;
 }
 
+.sliderButtons:hover{
+    cursor: pointer;
+    transform: scale(0.9);
+    opacity: 60%;
+}
+
+.sliderButtons:active{
+    cursor: pointer;
+    transform: scale(1.1);
+    opacity: 10%;
+}
 
 .sliderMostrarVinoIz{
     animation: sliderMostrarVinoIz 1s 1;
@@ -213,6 +225,18 @@ body{
     width: 550px;
 }
 
+.botonesProyectos:hover{
+    cursor: pointer;
+    transform: scale(0.9);
+    opacity: 0.8;
+}
+
+.botonesProyectos:active{
+    cursor: pointer;
+    transform: scale(1.1);
+    opacity: 0.5;
+}
+
 #galaProyectos{
     background-color: yellow;
 }
@@ -229,6 +253,104 @@ body{
     right: 2vw;
     width: 50vw;
 }
+
+
+.popUp{
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    z-index: 15;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    transform: scale(0);
+}
+
+#galaPopUp{
+    background-color: yellow;
+}
+#contentGala{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    height: 70vh;
+    width: 100%;
+}
+
+#textGala{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40vw;
+    height: fit-content;
+    text-align: center;
+}
+
+#imagenGala{
+    width: 40vw;
+}
+
+#musPopUp{
+    background-color: greenyellow;
+}
+
+#logoMus{
+    width: 30vw;
+}
+
+#contentMus{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+#textMus{
+    width: 55vw;
+    text-align: center;
+}
+
+#alfonsoMus{
+    width: 20vw;
+}
+
+.showPopUp{
+    animation: showPopUp 1s 1;
+    animation-fill-mode: forwards;
+}
+.hidePopUp{
+    animation: hidePopUp 1s 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes showPopUp{
+    0%{transform: scale(0); opacity: 0;}
+    100%{transform: scale(1); opacity: 1;}
+}
+
+@keyframes hidePopUp{
+    0%{transform: scale(1); opacity: 1;}
+    100%{transform: scale(0); opacity: 0;}
+}
+
+.closePopUp:hover{
+    cursor: pointer;
+    transform: scale(0.9);
+    opacity: 0.8;
+}
+
+.closePopUp:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    opacity: 0.5;
+}
+
 
 @media only screen and (max-width: 1025px) {
     .movil{
@@ -314,6 +436,51 @@ body{
 
     .flexRowButtons{
         justify-content: center;
+    }
+
+    #contentGala{
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+        height: 70vh;
+        width: 100%;
+    }
+
+    #textGala{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 90vw;
+        height: fit-content;
+    }
+    
+    #imagenGala{
+        width: 90vw;
+    }
+
+    #contentMus{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        height: 70vh
+    }
+    
+    #logoMus{
+        width: 60%;
+    }
+
+    #textMus{
+        width: 90vw;
+        text-align: center;
+    }
+    
+    #alfonsoMus{
+        width: 70vw;
+        height: 50vh;
     }
 }
 

@@ -8,7 +8,7 @@
 </head>
 <body>
     <!-- Scroll por secciones -->
-    <div class="container">
+    <div id="container">
         <!-- Pagina principal -->
         <div id="main" class="section">
             <div id="header">
@@ -35,12 +35,12 @@
                 <div> <img src="./img/icon.png" alt=""></div>
             </div>
             <div id="sliderVinoteca">
-                <div id="botonIzquierdo">&lt</div>
+                <div id="botonIzquierdo" class="sliderButtons">&lt</div>
                 <div id="sliderContent">
                     <img id="currentCicloImg"></img>
                     <div id="currentCicloText"></div>
                 </div>
-                <div id="botonDerecho">&gt</div>
+                <div id="botonDerecho" class="sliderButtons">&gt</div>
             </div>
         </div>
         <!-- proyectos -->
@@ -57,9 +57,37 @@
                 </div>
             </div>
             <img src="./img/ciclo.png" alt="" id="cicloMascota">
+
+
+            <!-- Emerging content -->
+                <div id="galaPopUp" class="popUp">
+                    <div class="secondHeader">
+                        <div id="closeGalaPopUp" class="closePopUp">(x)</div>
+                        <div> <img src="./img/icon.png" alt=""></div>
+                    </div>
+                    <div id="contentGala">
+                        <div id="textGala">
+                            <h1>GALA FIN DE CICLO</h1>
+                            <div>Esto y lo otro, patatin patatan. Esto y lo otro, patatin patatan.Esto y lo otro, patatin patatan.Esto y lo otro, patatin patatan.Esto y lo otro, patatin patatan.Esto y lo otro, patatin patatan.Esto y lo otro, patatin patatan.</div>
+                        </div>
+                        <img id="imagenGala" src="./img/gala.png" alt="">
+                    </div>
+                </div>
+
+                <div id="musPopUp" class="popUp">
+                    <div class="secondHeader">
+                        <div id="closeMusPopUp" class="closePopUp">(x)</div>
+                        <div> <img src="./img/icon.png" alt=""></div>
+                    </div>
+                    <img id="logoMus" src="./img/mus.png" alt="">
+                    <div id="contentMus">
+                        <div id="textMus">Esto y lo otro, patatin patatan. Esto y lo otro, patatin patatan. Esto y lo otro, patatin patatan. Esto y lo otro, patatin patatan. Esto y lo otro, patatin patatan. Esto y lo otro, patatin patatan. Esto y lo otro, patatin patatan. Esto y lo otro, patatin patatan. Esto y lo otro, patatin patatan. </div>
+                        <img id="alfonsoMus" src="./img/alfonso.png" alt="">
+                    </div>
+                </div>
         </div>
     </div>
-    <script src="./js/index.js"></script>
-    <script src="./js/carrusel.js"></script>
+
+    <script src="./js/index.js" ></script>
 </body>
 </html>
