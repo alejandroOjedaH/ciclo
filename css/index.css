@@ -321,23 +321,27 @@ body{
 }
 
 .showPopUp{
-    animation: showPopUp 1s 1;
-    animation-fill-mode: forwards;
+    /* animation: showPopUp 1s 1;
+    animation-fill-mode: forwards; */
+    transform: scale(1);
+    opacity: 1;
 }
 .hidePopUp{
-    animation: hidePopUp 1s 1;
-    animation-fill-mode: forwards;
+    /* animation: hidePopUp 1s 1;
+    animation-fill-mode: forwards; */
+    transform: scale(0);
+    opacity: 0;
 }
 
-@keyframes showPopUp{
+/* @keyframes showPopUp{
     0%{transform: scale(0); opacity: 0;}
     100%{transform: scale(1); opacity: 1;}
-}
+} */
 
-@keyframes hidePopUp{
+/* @keyframes hidePopUp{
     0%{transform: scale(1); opacity: 1;}
     100%{transform: scale(0); opacity: 0;}
-}
+} */
 
 .closePopUp:hover{
     cursor: pointer;
@@ -479,7 +483,7 @@ body{
     }
     
     #alfonsoMus{
-        width: 70vw;
+        width: 80vw;
         height: 50vh;
     }
 }

@@ -148,6 +148,8 @@ window.onload= () =>{
 
         musPopUp.classList.remove("hidePopUp");
         musPopUp.classList.add("showPopUp");
+
+        document.getElementById("container").style.overflow = 'hidden';
     }
     becaButton.onclick = () => {
         becaButton.innerHTML = "<del>"+becaButton.innerText+"</del>";
@@ -169,17 +171,16 @@ window.onload= () =>{
 
     closeGalaPopUp.onclick = () => {
         closePopUp(galaPopUp);
-        document.getElementById("container").style.overflowY = 'auto';
     }
 
     closeMusPopUp.onclick = () => {
         closePopUp(musPopUp);
-        
     }
 
     function closePopUp(popUpToClose){
         popUpToClose.classList.remove("showPopUp");
         popUpToClose.classList.add("hidePopUp");
+        document.getElementById("container").style.overflowY = 'auto';
     }
 
 }
