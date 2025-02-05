@@ -1,0 +1,250 @@
+@font-face {
+    font-family: PlayfairDisplay;
+    src: url(../fuente/Playfair_Display/PlayfairDisplay-VariableFont_wght.ttf);
+  }
+
+*{
+    font-family: PlayfairDisplay;
+    line-height: 1.4;
+}
+
+body{
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+.container{
+    height: 100vh;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+}
+
+.section{
+    height: 100vh; 
+    scroll-snap-align: start;
+}
+
+.movil{
+    display: none;
+}
+
+#main{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#header{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: end;
+    margin-top: 5vh;
+    margin-right: 5vw;
+}
+
+.boton{
+    padding: 0px 20px ;
+    font-size: 20px;
+    color:#555555;
+
+}
+
+.boton:hover{
+    opacity: 80%;
+}
+
+.boton:active{
+    opacity: 50%;
+}
+
+#info{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: end;
+}
+
+#separacionInfo{
+    width: 10px;
+}
+
+#cicloImg{
+    width: 65vw;
+    padding-left: 2vw;
+}
+#cicloText{
+    width: 25vw;
+    color: #1c1c1c;
+    font-size: 32px;
+    padding-right: 2vw;
+}
+
+#videoteca{
+    background-color: crimson;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.secondHeader{
+    width: 90vw;
+    font-size: 32px;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+
+#sliderVinoteca{
+    width: 70vw;
+    height:80vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 40px;
+}
+
+#sliderContent{
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    margin: 20px;
+}
+#currentCicloImg{
+    width: 35vw;
+    height: 70vh;
+}
+#currentCicloText{
+    width:25vw;
+    height: fit-content;
+    text-align: center;
+    font-size: 32px;
+    text-align: left;
+}
+
+
+.sliderMostrarVinoIz{
+    animation: sliderMostrarVinoIz 1s 1;
+    animation-fill-mode: forwards;
+}
+
+.sliderOcultarVinoIz{
+    animation: sliderOcultarVinoIz 1s 1;
+    animation-fill-mode: forwards;
+}
+
+.sliderMostrarVinoDer{
+    animation: sliderMostrarVinoDer 1s 1;
+    animation-fill-mode: forwards;
+}
+
+.sliderOcultarVinoDer{
+    animation: sliderOcultarVinoDer 1s 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes sliderMostrarVinoIz{
+    0%{transform: scale(0.8,0.8); right: 30%; opacity: 0;}
+    100%{transform: scale(1,1); right: 0%; opacity: 1;}
+}
+
+@keyframes sliderOcultarVinoIz {
+    0%{transform: scale(1,1); left: 0%; opacity: 1;}
+    100%{transform: scale(0.8,0.8); left: 30%; opacity: 0;}
+}
+
+@keyframes sliderMostrarVinoDer{
+    0%{transform: scale(0.8,0.8); left: 30%; opacity: 0;}
+    100%{transform: scale(1,1); left: 0%; opacity: 1;}
+}
+
+@keyframes sliderOcultarVinoDer {
+    0%{transform: scale(1,1); right: 0%; opacity: 1;}
+    100%{transform: scale(0.8,0.8); right: 30%; opacity: 0;}
+}
+
+#proyectos{
+    background-color: deepskyblue;
+}
+
+@media only screen and (max-width: 1025px) {
+    .movil{
+        display: none;
+    }
+
+    #main{
+        justify-content: space-between;
+    }
+    #header{
+       margin-top: 5.625vh;
+    }
+
+    #info{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 12vh;
+    }
+    
+    #cicloImg{
+        width: 80vw;
+        padding-left: 0vw;
+        margin-bottom: 40px;
+    }
+    #cicloText{
+        width: 80vw;
+        color:#1c1c1c;
+        padding-right: 0vw;
+        font-size: 24px;
+    }
+
+    #sliderVinoteca{
+        width: 95vw;
+        height:50vh;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 40px;
+    }
+    #sliderContent{
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        margin: 20px;
+    }
+
+    #currentCicloImg{
+        height: 40vh;
+        width: 70vw;
+    }
+    #currentCicloText{
+        width:95%;
+        height: fit-content;
+        text-align: center;
+        font-size: 14px;
+        text-align: left;
+    }
+    
+}
+
+@media only screen and (min-width: 1025px) {
+
+}
