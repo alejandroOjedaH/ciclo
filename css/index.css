@@ -90,7 +90,6 @@ body{
     background-color: crimson;
     display: flex;
     align-items: center;
-    justify-content: space-around;
     flex-direction: column;
 }
 
@@ -102,6 +101,7 @@ body{
     justify-content: space-between;
     flex-wrap: nowrap;
     flex-direction: row;
+    margin-top: 5vh;
 }
 
 #sliderVinoteca{
@@ -197,9 +197,6 @@ body{
     position: relative;
 }
 
-#headerProyectos{
-    margin-top: 7vh;
-}
 
 #contentProyectos{
     display: flex;
@@ -264,7 +261,6 @@ body{
 
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
     align-items: center;
 
     transform: scale(0);
@@ -396,6 +392,7 @@ body{
         align-items: center;
         justify-content: space-between;
         font-size: 40px;
+        margin-top: 5vh;
     }
     #sliderContent{
         width: 100vw;

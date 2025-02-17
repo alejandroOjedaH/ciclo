@@ -17,7 +17,7 @@ window.onload= () =>{
     let galaPopUp = document.getElementById("galaPopUp");
     let musPopUp = document.getElementById("musPopUp");
     let closeGalaPopUp = document.getElementById("closeGalaPopUp");
-    let colseMusPopUp = document.getElementById("closeMusPopUp");
+    let closeMusPopUp = document.getElementById("closeMusPopUp");
 
     cicloJson = loadJson();
     loadInicial();
@@ -64,6 +64,10 @@ window.onload= () =>{
 
         currentImg.src = cicloJson[0].img;
         currentText.innerHTML=cicloJson[0].text;
+        
+        currentSlide.onclick = () => {
+            navigation.navigate("./proyecto/index.html?p="+currentPosition);
+        }
     } 
     
     function changeRight(){
@@ -81,6 +85,9 @@ window.onload= () =>{
             newSlide = createNewSlide();
             newSlide.children[0].src = cicloJson[currentPosition].img;
             newSlide.children[1].innerHTML = cicloJson[currentPosition].text;
+            newSlide.onclick = () => {
+                navigation.navigate("./proyecto/index.html?p="+currentPosition);
+            }
             setTimeout(function(){
                 currentSlide.parentNode.replaceChild(newSlide, currentSlide);
                 currentSlide = newSlide;
@@ -103,7 +110,9 @@ window.onload= () =>{
             newSlide = createNewSlide();
             newSlide.children[0].src = cicloJson[currentPosition].img;
             newSlide.children[1].innerHTML = cicloJson[currentPosition].text;
-
+            newSlide.onclick = () => {
+                navigation.navigate("./proyecto/index.html?p="+currentPosition);
+            }
         setTimeout(function(){
                 currentSlide.parentNode.replaceChild(newSlide, currentSlide);
                 currentSlide = newSlide;
