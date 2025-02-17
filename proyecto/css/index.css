@@ -1,3 +1,13 @@
+@font-face {
+    font-family: PlayfairDisplay;
+    src: url(../fuente/Playfair_Display/PlayfairDisplay-VariableFont_wght.ttf) format('woff');
+}
+
+*{
+    font-family: PlayfairDisplay;
+    line-height: 1.4;
+}
+
 body{
     background-color: black;
 }
