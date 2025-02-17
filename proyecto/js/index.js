@@ -117,7 +117,7 @@ window.onload  = () =>{
 
     function iniProject(){
         if(params.get("p") == null || jsonProyectos.length-1 < params.get("p") || 0 > params.get("p")){
-            navigation.navigate("./index.html?p=0");
+            window.location.href = "./index.html?p=0";
         }else{
             loadContent(params.get("p"));
         }
@@ -160,7 +160,7 @@ window.onload  = () =>{
             newElementList.innerHTML = ciclo.name;
 
             newElementList.onclick = () => {
-                navigation.navigate("./index.html?p="+i);
+                window.location.href = "./index.html?p="+i;
             };
 
             menuPopUp.append(newElementList);

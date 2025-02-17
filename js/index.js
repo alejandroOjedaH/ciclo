@@ -66,7 +66,7 @@ window.onload= () =>{
         currentText.innerHTML=cicloJson[0].text;
         
         currentSlide.onclick = () => {
-            navigation.navigate("./proyecto/index.html?p="+currentPosition);
+            window.location.href = "./proyecto/index.html?p="+currentPosition ;
         }
     } 
     
@@ -86,7 +86,7 @@ window.onload= () =>{
             newSlide.children[0].src = cicloJson[currentPosition].img;
             newSlide.children[1].innerHTML = cicloJson[currentPosition].text;
             newSlide.onclick = () => {
-                navigation.navigate("./proyecto/index.html?p="+currentPosition);
+                window.location.href = "./proyecto/index.html?p="+currentPosition ;
             }
             setTimeout(function(){
                 currentSlide.parentNode.replaceChild(newSlide, currentSlide);
@@ -111,7 +111,7 @@ window.onload= () =>{
             newSlide.children[0].src = cicloJson[currentPosition].img;
             newSlide.children[1].innerHTML = cicloJson[currentPosition].text;
             newSlide.onclick = () => {
-                navigation.navigate("./proyecto/index.html?p="+currentPosition);
+                window.location.href = "./proyecto/index.html?p="+currentPosition ;
             }
         setTimeout(function(){
                 currentSlide.parentNode.replaceChild(newSlide, currentSlide);
