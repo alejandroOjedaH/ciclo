@@ -1,6 +1,7 @@
 window.onload= () =>{
     let insta = document.getElementById("insta");
     let mail = document.getElementById("mail");
+    let icons = document.getElementsByClassName("cicloIcon");
 
     //Carrusel
     let cicloJson;
@@ -68,7 +69,16 @@ window.onload= () =>{
         currentSlide.onclick = () => {
             window.location.href = "./proyecto/index.html?p="+currentPosition ;
         }
+        toMainPage();
     } 
+
+    function toMainPage(){
+        for (let icon of icons) {
+            icon.onclick = () => {
+                window.location.href = "./index.html";
+            }
+        }
+    }
     
     function changeRight(){
         let newSlide;
@@ -130,6 +140,7 @@ window.onload= () =>{
         slide.id = "sliderContent";
         img.id="currentCicloImg";
         text.id="currentCicloText";
+        slide.classList.add("pointer");
 
         img.classList.add("absoluta");
         text.classList.add("absoluta");

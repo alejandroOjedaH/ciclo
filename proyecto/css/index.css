@@ -52,7 +52,7 @@ body{
 }
 
 .imgCorto{
-    width: 500px;
+    width: 400px;
     height: 27vh;
 }
 
@@ -83,13 +83,21 @@ body{
     justify-content: center;
     align-items: center;
 
-    background-color: Grey;
+    background-color: black;
     overflow: hidden;
 }
 
 #menuPopUp div{
     font-size: 25px;
     padding:10px 15px;
+    color: red;
+    border-bottom: 1px solid red;
+    width: 100%;
+    text-align: center;
+}
+
+#menuPopUp div:hover{
+    cursor: pointer;
 }
 
 #menuBackground{
@@ -100,6 +108,10 @@ body{
         z-index: 10;  
         /* background-color: grey; */
         top:0;
+}
+
+.pointer:hover{
+    cursor: pointer;
 }
 
 .arrowOpen{
@@ -129,7 +141,7 @@ body{
 
     .imgCorto{
         width: 300px;
-        height: 23vh;
+        height: 22vh;
     }
 
     #menuPopUp{

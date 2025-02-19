@@ -52,6 +52,10 @@ body{
 
 }
 
+.pointer:hover{
+    cursor: pointer;
+}
+
 .boton:hover{
     opacity: 80%;
     cursor: pointer;

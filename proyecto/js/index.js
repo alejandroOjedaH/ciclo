@@ -4,6 +4,7 @@ window.onload  = () =>{
     let titulo = document.getElementById("thisCiclo");
     let cortos = document.getElementById("content");
     let menuArrow = document.getElementById("menuArrow");
+    let icons = document.getElementsByClassName("cicloIcon");
     let querystring = window.location.search;
     let params = new URLSearchParams(querystring);
     let jsonProyectos = loadJson();
@@ -17,22 +18,22 @@ window.onload  = () =>{
             "cortos":[
                 {
                     "img":"./img/gala.png",
-                    "titulo":"<h1>Pinga</h1>",
+                    "titulo":"Pinga",
                     "autor":"Diego",
                 },
                 {
                     "img":"./img/ciclo_header.png",
-                    "titulo":"<h1>Abre</h1>",
+                    "titulo":"Abre",
                     "autor":"Sergio",
                 },
                 {
                     "img":"./img/gala.png",
-                    "titulo":"<h1>xD</h1>",
+                    "titulo":"xD",
                     "autor":"Prueba",
                 },
                 {
                     "img":"./img/ciclo_header.png",
-                    "titulo":"<h1>Chiste 1</h1>",
+                    "titulo":"Chiste 1",
                     "autor":"Txema",
                 },
             ]
@@ -42,22 +43,22 @@ window.onload  = () =>{
         "cortos":[
             {
                 "img":"./img/gala.png",
-                "titulo":"<h1>Pinga</h1>",
+                "titulo":"Pinga",
                 "autor":"Prueba3",
             },
             {
                 "img":"./img/ciclo_header.png",
-                "titulo":"<h1>2</h1>",
+                "titulo":"2",
                 "autor":"3",
             },
             {
                 "img":"./img/gala.png",
-                "titulo":"<h1>4</h1>",
+                "titulo":"4",
                 "autor":"5",
             },
             {
                 "img":"./img/ciclo_header.png",
-                "titulo":"<h1>6</h1>",
+                "titulo":"6",
                 "autor":"7",
             },
         ]
@@ -67,22 +68,22 @@ window.onload  = () =>{
         "cortos":[
             {
                 "img":"./img/gala.png",
-                "titulo":"<h1>Pinga</h1>",
+                "titulo":"Pinga",
                 "autor":"Pingenson",
             },
             {
                 "img":"./img/ciclo_header.png",
-                "titulo":"<h1>sus</h1>",
+                "titulo":"sus",
                 "autor":"Amon",
             },
             {
                 "img":"./img/gala.png",
-                "titulo":"<h1>Gala</h1>",
+                "titulo":"Gala",
                 "autor":"Ciclo",
             },
             {
                 "img":"./img/ciclo_header.png",
-                "titulo":"<h1>Prueba</h1>",
+                "titulo":"Prueba",
                 "autor":"Cisco",
             },
         ]
@@ -92,22 +93,22 @@ window.onload  = () =>{
         "cortos":[
             {
                 "img":"./img/gala.png",
-                "titulo":"<h1>Pinga</h1>",
+                "titulo":"Pinga",
                 "autor":"Pingenson",
             },
             {
                 "img":"./img/ciclo_header.png",
-                "titulo":"<h1>sus</h1>",
+                "titulo":"sus",
                 "autor":"Amon",
             },
             {
                 "img":"./img/gala.png",
-                "titulo":"<h1>Gala</h1>",
+                "titulo":"Gala",
                 "autor":"Ciclo",
             },
             {
                 "img":"./img/ciclo_header.png",
-                "titulo":"<h1>Prueba</h1>",
+                "titulo":"Prueba",
                 "autor":"Cisco",
             },
         ]
@@ -120,6 +121,15 @@ window.onload  = () =>{
             window.location.href = "./index.html?p=0";
         }else{
             loadContent(params.get("p"));
+            toMainPage();
+        }
+    }
+
+    function toMainPage(){
+        for (let icon of icons) {
+            icon.onclick = () => {
+                window.location.href = "../index.html";
+            }
         }
     }
 
@@ -132,16 +142,23 @@ window.onload  = () =>{
             let cortoContainer = document.createElement("div");
             let imagenCorto = document.createElement("img");
             let tituloCorto = document.createElement("div");
+            let etiquetaTitulo = document.createElement("h1");
             let autorCorto = document.createElement("div");
 
             cortoContainer.classList.add("cortoContainer");
             imagenCorto.classList.add("imgCorto");
 
+            cortoContainer.classList.add("pointer");
             imagenCorto.src= corto.img;
-            tituloCorto.innerHTML= corto.titulo;
+            tituloCorto.append(etiquetaTitulo);
+            etiquetaTitulo.innerHTML= corto.titulo;
             autorCorto.innerHTML= corto.autor;
 
             cortoContainer.append(imagenCorto,tituloCorto,autorCorto);
+            cortoContainer.onclick = () => {
+                window.location.href = "./corto/index.html?c="+corto.titulo;
+            };
+
             cortos.appendChild(cortoContainer);
         });
     }
