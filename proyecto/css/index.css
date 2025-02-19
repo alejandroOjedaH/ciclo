@@ -43,12 +43,12 @@ body{
 
     color: white;
 
-    width: min-content;
+    width: 100%;
 }
 
 .cortoContainer{
     margin-top: 100px;
-
+    width: min-content;
 }
 
 .imgCorto{
