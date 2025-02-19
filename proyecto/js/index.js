@@ -28,7 +28,7 @@ window.onload  = () =>{
                 },
                 {
                     "img":"./img/gala.png",
-                    "titulo":"xD",
+                    "titulo":"Prueba de titulo largo a ver que tal",
                     "autor":"Prueba",
                 },
                 {

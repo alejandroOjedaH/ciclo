@@ -24,6 +24,11 @@ window.onload  = () =>{
                 "embedId": "2yJgwwDcgV8",
                 "curiosidades":"Este chiste en realidad no era muy gracioso",
             },
+            {
+                "titulo":"Prueba de titulo largo a ver que tal",
+                "embedId": "2yJgwwDcgV8",
+                "curiosidades":"Esto tiene un nombre exageradamente largo, no se si he escrito esa palabra bien",
+            },
         ]
     }
 

@@ -80,4 +80,7 @@ body{
         width: 90vw;
     }
 
+    #titulo{
+        max-width: 60vw;
+    }
 }
