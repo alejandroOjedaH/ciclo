@@ -35,10 +35,21 @@ window.onload  = () =>{
     iniProject();
     function iniProject(){
         if(params.get("c") == null || !jsonCortos.find((corto) => params.get("c") === corto.titulo)){
-            navigation.navigate("./index.html?c="+jsonCortos[Math.floor(Math.random() * jsonCortos.length)].titulo);
+            window.location.href = "./index.html?c="+jsonCortos[Math.floor(Math.random() * jsonCortos.length)].titulo;
         }else{
             loadContent();
+            checkLocalStorage();
             toMainPage();
+        }
+    }
+
+    function checkLocalStorage(){
+        if(!localStorage.getItem("currentProject")){
+            localStorage.setItem("currentProject","0");
+        }
+
+        titulo.onclick = () => {
+            window.location.href = "../index.html?p="+localStorage.getItem("currentProject");
         }
     }
 
@@ -53,7 +64,7 @@ window.onload  = () =>{
     function loadContent(){
         let currentCorto = jsonCortos.find((corto) => params.get("c") === corto.titulo);
 
-        titulo.innerText = currentCorto.titulo;
+        // titulo.innerText = currentCorto.titulo;
         cortoVideo.src = "https://www.youtube.com/embed/"+currentCorto.embedId;
         curiosidades.innerText = currentCorto.curiosidades;
     }

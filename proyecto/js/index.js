@@ -121,8 +121,13 @@ window.onload  = () =>{
             window.location.href = "./index.html?p=0";
         }else{
             loadContent(params.get("p"));
+            setLocalStorage(params.get("p"));
             toMainPage();
         }
+    }
+
+    function setLocalStorage(currentProject){
+        localStorage.setItem("currentProject",currentProject);
     }
 
     function toMainPage(){
